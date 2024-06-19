@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/red_maze-app.ts",
+  "app": "npx ts-node --prefer-ts-exts ./infrastructure/bin/red_maze-app.ts",
   "watch": {
     "include": [
       "**"
