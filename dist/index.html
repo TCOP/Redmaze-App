@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="index.js"></script>
-    <title>Document</title>
+    <script src="bundle.js" defer></script>
+    <title>Redmaze</title>
 </head>
 
 <body>
     <h1>Welcome to Redmaze</h1>
     <label for="input">Enter Name:</label>
     <input type="text" id="input"><br><br>
-    <input type="button" id="InputButton" value="Submit" onclick="httpSend();">
+    <input type="button" id="InputButton" value="Log In"
+        onclick="httpRequest('http://localhost:3000/add-user', ['input'])">
+    <a href="page2.html">Create an account</a>
+    <a href="page3.html">Change Password</a>
 </body>
 
 </html>

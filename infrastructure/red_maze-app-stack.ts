@@ -6,13 +6,14 @@ export class RedMazeAppStack extends Stack {
     super(scope, id, props);
 
     const redMazeBucket = new s3.Bucket(this, 'RedMazeBucket', {
+      websiteIndexDocument: 'index.html',
       publicReadAccess: false,
       versioned: true,
       encryption: s3.BucketEncryption.S3_MANAGED
     });
 
     new s3deploy.BucketDeployment(this, 'RedMazeBucketDeploy', {
-      sources: [s3deploy.Source.asset('./lib/src/pages')],
+      sources: [s3deploy.Source.asset('src/0.index')],
       destinationBucket: redMazeBucket,
     });
 

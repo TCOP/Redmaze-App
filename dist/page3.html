@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="bundle.js" defer></script>
+    <title>Change Password</title>
+</head>
+
+<body>
+    <h1>Change Password</h1>
+    <label for="input">Username:</label>
+    <input type="text" id="username"><br><br>
+    <label for="input">New Password:</label>
+    <input type="text" id="newPassword1"><br><br>
+    <label for="input">Re-enter Password:</label>
+    <input type="text" id="newPassword2"><br><br>
+    <input type="button" id="dbInputButton" value="Create User"
+        onclick="httpRequest('http://localhost:3000/change-password', ['username', 'newPassword1', 'newPassword2'])">
+    <div id="message"></div>
+</body>
+
+</html>
